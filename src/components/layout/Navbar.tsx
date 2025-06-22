@@ -1,7 +1,26 @@
 import { User } from 'lucide-react'
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
+import { Link } from 'react-router'
 
 function Navbar() {
+  const routes = [
+    {
+      route: '/posts',
+      label: 'Posts',
+    },
+    {
+      route: '/users',
+      label: 'Users',
+    },
+    {
+      route: '/comments',
+      label: 'Comments',
+    },
+    {
+      route: '/about',
+      label: 'About',
+    },
+  ]
   return (
     <nav className="fixed z-10 w-full bg-white">
       <div className="mx-5 flex min-h-16 items-center justify-between">
@@ -11,10 +30,9 @@ function Navbar() {
         </div>
 
         <ul className="flex gap-5 text-sm font-semibold">
-          <li>Posts</li>
-          <li>Users</li>
-          <li>Comments</li>
-          <li>About</li>
+          {routes.map((item) => (
+            <Link to={item.route}>{item.label}</Link>
+          ))}
         </ul>
 
         <Popover>
