@@ -3,15 +3,17 @@ import Home from './components/home'
 import Navbar from './components/layout/Navbar'
 import PostPage from './components/post'
 import NotFound from './components/error/NotFound'
+import UserList from './components/user'
 
 function App() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto min-h-svh pt-16">
+      <div className="container mx-auto min-h-svh">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/posts" element={<PostPage />} />
+          <Route path="/users" element={<UserList />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
