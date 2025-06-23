@@ -25,7 +25,7 @@ function Navbar() {
     <nav className="fixed z-10 w-full bg-white">
       <div className="mx-5 flex min-h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="size-5 rounded-full bg-black" />
+          <div className="size-5 rounded-full bg-sky-500" />
           <h1 className="text-2xl font-semibold">Posts</h1>
         </div>
 
