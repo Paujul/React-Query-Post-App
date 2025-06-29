@@ -5,6 +5,7 @@ import PostPage from './components/post'
 import NotFound from './components/error/NotFound'
 import UserList from './components/user'
 import AboutPage from './components/about'
+import RegisterPage from './components/register'
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/posts" element={<PostPage />} />
           <Route path="/users" element={<UserList />} />
-          <Route path="/about" element={<AboutPage/>} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/register" element={<RegisterPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

@@ -1,6 +1,7 @@
 import { User } from 'lucide-react'
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 import { Link } from 'react-router'
+import RegisterPage from '../register'
 
 function Navbar() {
   const routes = [
@@ -26,7 +27,9 @@ function Navbar() {
       <div className="mx-5 flex min-h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="size-5 rounded-full bg-sky-500" />
-          <h1 className="text-2xl font-semibold">Posts</h1>
+          <Link to="/">
+            <h1 className="text-2xl font-semibold">Posts</h1>
+          </Link>
         </div>
 
         <ul className="flex gap-5 text-sm font-semibold">
@@ -42,7 +45,9 @@ function Navbar() {
             </div>
           </PopoverTrigger>
 
-          <PopoverContent className="mr-5 mt-2">ASD</PopoverContent>
+          <PopoverContent className="mr-5 mt-2 p-0 border-0 w-96">
+            <RegisterPage />
+          </PopoverContent>
         </Popover>
       </div>
     </nav>
